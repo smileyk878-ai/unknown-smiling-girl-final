@@ -5,18 +5,22 @@
    ========================================================= */
 
 const ASSETS = {
-  bedroomMorning: "assets/image-3.jpg",   // Scene 1
-  livingAlone:    "assets/image-7.jpg",   // Scene 2 (start), Scene 3, Scene 4 (start)
-  livingMumma:    "assets/image-12.jpg",  // Scene 2 (Mumma joins), Scene 6 (start)
-  livingFamily:   "assets/image-9.jpg",   // Scene 2 (Papa enters), Scene 4 (Papa at table), Scene 6 (debate)
-  ruhiArriving:   "assets/image-8.jpg",   // Scene 5 (beat 1)
-  ruhiBedroom:    "assets/image-10.jpg",  // Scene 5 (beat 2)
-  teepeeDrawing:  "assets/image-11.jpg",  // Scene 5 (beat 3)
-  schoolEntrance: "assets/image-4.jpg"    // Episode 2 Teaser
+  bedroomMorning: "IMG_20261124_142131.png", // 1. Aarvi sleeping (Scene 1 & Memory Wall)
+  livingAlone: "file_0000000050248211988dd607c80cba23.png", // 2. Aarvi alone in the living room
+  livingMumma: "file_0000000094888211bd079e7a404da5ba.png", // 3. Mumma joins Aarvi
+  livingFamily: "file_000000005e2082119db998fb887672eb.png", // 4. All three together
+  ruhiVisits: "file_00000000c0e082119e422867f373807d.png", // 5. Ruhi visits
+  ruhiRoom: "file_0000000084ec8211894f8c4c0276b4eb.png", // 6. Ruhi and Aarvi enter Aarvi's room
+  drawingScene: "file_00000000887482118297f2ab5ed9fcdd.png", // 7. The drawing scene
+  ruhiExits: "file_00000000ac08821183a65b00cd6422b5.png", // 8. Ruhi exits
+  gardenAllThree: "IMG-20261125-WA0005.jpg", // 9. Garden scene with all three
+  gardenAarviMumma: "IMG-20261125-WA0006.jpg", // 10. Focus on Aarvi and Mumma
+  gardenAarviGetsUp: "IMG-20261125-WA0007.jpg", // 11. Aarvi gets up
+  gardenAarviGoesInside: "IMG-20261125-WA0004.jpg", // 12. Aarvi goes inside while parents sit
+  schoolEntrance: "IMG-20261124-WA0003.jpg", // 13. Rainbow Valley School entrance
 };
 
-/* Optional PixVerse video support:
-   When you have PixVerse clips, add `video: "assets/clip-name.mp4"` to any beat below. */
+/* Optional PixVerse video support: add `video: "clip.mp4"` to any beat object. */
 
 const STORY_BEATS = [
   // =======================================================
