@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Unknown Smiling Girl — Episode 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-everbliss">
+
+  <!-- VIEW 1: AARVI'S MEMORY WALL (PRESENT-DAY EVERBLISS) -->
+  <main id="memory-wall-view" class="view active" aria-label="Aarvi's Memory Wall">
+    <div class="everbliss-ambient" aria-hidden="true">
+      <span class="mote m1"></span>
+      <span class="mote m2"></span>
+      <span class="mote m3"></span>
+      <span class="mote m4"></span>
+      <span class="mote m5"></span>
+    </div>
+
+    <div class="wall-container">
+      <header class="wall-header">
+        <p class="series-kicker">Unknown Smiling Girl</p>
+        <h1 class="wall-title">Aarvi’s Memory Wall</h1>
+        <p class="wall-subtitle">Tap the first photograph to enter Sunday morning.</p>
+      </header>
+
+      <section class="photo-gallery" aria-label="Memory Photographs">
+        <button
+          id="open-episode-1-btn"
+          class="memory-frame memory-frame--active"
+          type="button"
+          aria-label="Open Episode 1: One Sunday, A Thousand Little Memories"
+        >
+          <div class="frame-mat">
+            <div class="frame-photo-wrap">
+              <img
+                src="assets/image-3.jpg"
+                alt="Aarvi sleeping peacefully in her sunlit childhood bedroom"
+                class="frame-photo"
+              />
+              <span class="frame-shimmer" aria-hidden="true"></span>
+            </div>
+            <div class="frame-caption">
+              <span class="ep-tag">Episode 1</span>
+              <span class="ep-name">One Sunday, A Thousand Little Memories</span>
+              <span class="ep-author">Written by Smilie K.</span>
+              <span class="ep-cta">Tap photograph to enter &rsaquo;</span>
+            </div>
+          </div>
+        </button>
+
+        <div class="memory-frame memory-frame--locked" aria-hidden="true">
+          <div class="frame-mat">
+            <div class="frame-photo-wrap frame-photo-wrap--placeholder">
+              <span class="lock-label">Episode 2</span>
+            </div>
+            <div class="frame-caption">
+              <span class="ep-name">Rainbow Valley School</span>
+              <span class="ep-author">Coming Soon</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="memory-frame memory-frame--locked" aria-hidden="true">
+          <div class="frame-mat">
+            <div class="frame-photo-wrap frame-photo-wrap--placeholder">
+              <span class="lock-label">Memory III</span>
+            </div>
+            <div class="frame-caption">
+              <span class="ep-name">Awaiting…</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- VIEW 2: EPISODE 1 & EPISODE 2 TEASER STORY STAGE -->
+  <section id="story-view" class="view" aria-label="Interactive Story" hidden>
+    <div id="stage-backdrop" class="stage-backdrop" aria-hidden="true"></div>
+
+    <header class="story-topbar">
+      <button id="back-to-wall-btn" class="pill-btn" type="button" title="Return to Memory Wall">
+        &lsaquo; Memory Wall
+      </button>
+
+      <div id="scene-indicator" class="scene-pill">
+        <span id="scene-badge-text">Scene 1 — The Sleepy Morning</span>
+      </div>
+
+      <div class="topbar-actions">
+        <button id="fullscreen-btn" class="pill-btn icon-only" type="button" title="Toggle Fullscreen" aria-label="Toggle Fullscreen">
+          &#x26F6;
+        </button>
+      </div>
+    </header>
+
+    <div id="stage-viewport" class="stage-viewport">
+      <div id="art-frame" class="art-frame">
+        <img id="scene-image" class="scene-media" src="" alt="" />
+        <video id="scene-video" class="scene-media" playsinline muted loop hidden></video>
+
+        <div id="env-effects" class="env-effects" aria-hidden="true">
+          <div class="fx-sunbeams"></div>
+          <div class="fx-dust"></div>
+          <div class="fx-tv-glow"></div>
+          <div class="fx-fairy-lights"></div>
+          <div class="fx-teepee-stars"></div>
+          <div class="fx-school-shimmer"></div>
+        </div>
+
+        <!-- Scene 5 Interactive Element: Future House Drawing Highlight -->
+        <button
+          id="house-drawing-hotspot"
+          class="drawing-hotspot"
+          type="button"
+          hidden
+          aria-label="Inspect Aarvi and Ruhi's future house drawing"
+        ></button>
+
+        <div id="drawing-note" class="drawing-note" role="status" hidden>
+          <strong>Our Future House</strong> — Aarvi &amp; Ruhi’s dream drawing, kept to be framed forever.
+        </div>
+
+        <!-- Episode 2 Teaser: Separate Wooden Notice Board beside the closed gate -->
+        <button
+          id="school-notice-board"
+          class="school-notice-board"
+          type="button"
+          hidden
+          aria-label="Rainbow Valley School Notice Board"
+        >
+          <span class="board-roof"></span>
+          <span class="board-wood">
+            <span class="board-paper">
+              <span class="board-pin" aria-hidden="true"></span>
+              <span class="board-heading">NOTICE BOARD</span>
+              <span class="board-sub">Episode 2</span>
+              <span class="board-cta">Tap to Read</span>
+            </span>
+          </span>
+          <span class="board-post left-post" aria-hidden="true"></span>
+          <span class="board-post right-post" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div id="scene-title-overlay" class="scene-title-overlay" hidden>
+        <p id="overlay-episode-label" class="overlay-kicker"></p>
+        <h2 id="overlay-scene-title" class="overlay-heading"></h2>
+        <p class="overlay-hint">Tap to continue</p>
+      </div>
+    </div>
+
+    <footer id="story-hud" class="story-hud">
+      <div id="dialogue-card" class="dialogue-card" role="button" tabindex="0" aria-label="Advance story">
+        <div class="dialogue-meta">
+          <span id="speaker-pill" class="speaker-pill" hidden></span>
+          <span id="line-counter" class="line-counter"></span>
+        </div>
+        <p id="dialogue-text" class="dialogue-text"></p>
+        <div class="dialogue-controls">
+          <button id="prev-line-btn" class="nav-btn nav-btn--ghost" type="button">&lsaquo; Back</button>
+          <button id="next-line-btn" class="nav-btn nav-btn--primary" type="button">Continue &rsaquo;</button>
+        </div>
+      </div>
+    </footer>
+
+    <div id="teaser-hud" class="teaser-hud" hidden>
+      <div class="teaser-banner">
+        <p class="teaser-title">End of Episode 1 — One Sunday, A Thousand Little Memories</p>
+        <p class="teaser-sub">Tap the wooden <strong>Notice Board</strong> beside the school gate for an announcement.</p>
+        <div class="teaser-actions">
+          <button id="teaser-back-btn" class="nav-btn nav-btn--ghost" type="button">&lsaquo; Back to Story</button>
+          <button id="replay-ep1-btn" class="nav-btn nav-btn--primary" type="button">Replay Episode 1</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="notice-modal" class="notice-modal" role="dialog" aria-modal="true" aria-labelledby="notice-modal-title" hidden>
+      <div class="notice-modal-card">
+        <div class="rainbow-ribbon" aria-hidden="true"></div>
+        <p class="notice-school-name">RAINBOW VALLEY SCHOOL</p>
+        <h2 id="notice-modal-title" class="notice-heading">Episode 2 — Coming Soon!</h2>
+        <p class="notice-body">
+          A brand-new chapter of <em>Unknown Smiling Girl</em> awaits beyond these gates.
+          Stay tuned as Aarvi’s next memories unfold at Rainbow Valley School.
+        </p>
+        <div class="notice-modal-actions">
+          <button id="close-notice-btn" class="nav-btn nav-btn--primary" type="button">Close Notice</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="asset-warning" class="asset-warning" hidden>
+      <p id="asset-warning-text"></p>
+    </div>
+  </section>
+
+  <div id="transition-veil" class="transition-veil" aria-hidden="true"></div>
+  <script src="app.js"></script>
+</body>
+</html>
